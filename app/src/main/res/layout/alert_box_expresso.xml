@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_ab_robot_talking_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/cb_background_black"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_ab_expresso_message"
+                    style="@style/tv_body_1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="80dp"
+                    android:alpha="0.87"
+                    android:background="@drawable/outgoing_speech_bubble_white"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/temp_string_paragraph"
+                    android:textColor="@color/cb_on_background_black" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/iv_ab_expresso_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ai_robot_zoom_in_logo" />
+
+                <Button
+                    android:textColor="@color/cb_primary_purple"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_ab_expresso_proceed"
+                    style="@style/btn_borderless"
+                    android:text="@string/button_continue" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

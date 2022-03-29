@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".activities.SummativeResults">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:elevation="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/mtb_quiz_results_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/cb_surface"
+                    app:title="@string/quiz_results_toolbar_title" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/ll_quiz_results_calculation_loading"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:layout_gravity="center"
+                        app:indicatorColor="@color/cb_primary_purple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ai_robot_zoom_in_logo" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:alpha="0.6"
+                    android:id="@+id/tv_quiz_results_evaluation_text"
+                    style="@style/tv_body_1"
+                    android:textColor="@color/cb_on_background_black"
+                    android:text="@string/temp_string_paragraph"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:alpha="0.87"
+                    android:id="@+id/tv_quiz_results_score_text"
+                    style="@style/tv_headline_4"
+                    android:textColor="@color/cb_on_background_black"
+                    android:text="@string/temp_string_title"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp" />
+
+                <Button
+                    android:id="@+id/btn_quiz_results_proceed"
+                    android:layout_marginTop="12dp"
+                    style="@style/btn_contained"
+                    android:textColor="@color/cb_on_surface_white"
+                    android:layout_height="60dp"
+                    android:text="@string/button_proceed" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/kv_quiz_results_confetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</ScrollView>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    tools:context=".activities.PretestResults"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:elevation="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/mtb_pretest_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/cb_surface"
+                    app:title="@string/pretest_results_toolbar_title" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/ll_pretest_results_calculation_loading"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:layout_gravity="center"
+                        app:indicatorColor="@color/cb_primary_purple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/ai_robot_zoom_in_logo"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/tv_pretest_results_message_text"
+                    android:layout_gravity="center"
+                    style="@style/tv_headline_6"
+                    android:alpha="0.87"
+                    android:textColor="@color/cb_primary_black"
+                    android:textStyle="bold"
+                    android:text="@string/temp_string_title" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/tv_pretest_results_evaluation_text"
+                    style="@style/tv_body_1"
+                    android:alpha="0.6"
+                    android:textColor="@color/cb_background_black"
+                    android:text="@string/temp_string_paragraph"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_marginTop="24dp"
+                    android:id="@+id/lpi_pretest_results_module_10"
+                    android:max="150"
+                    android:scaleY="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/tv_subtitle_1"
+                        android:layout_alignParentStart="true"
+                        android:alpha="0.87"
+                        android:text="@string/pretest_results_module_10"
+                        android:textColor="@color/cb_on_background_black" />
+
+                    <TextView
+                        android:id="@+id/tv_pretest_results_module_10_score"
+                        style="@style/tv_subtitle_1"
+                        android:layout_alignParentEnd="true"
+                        android:alpha="0.87"
+                        android:text="@string/pretest_results_default_score"
+                        android:textColor="@color/cb_on_background_black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_marginTop="24dp"
+                    android:id="@+id/lpi_pretest_results_module_19"
+                    android:max="150"
+                    android:scaleY="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:alpha="0.87"
+                        style="@style/tv_subtitle_1"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/pretest_results_module_19"
+                        android:textColor="@color/cb_on_background_black" />
+
+                    <TextView
+                        android:id="@+id/tv_pretest_results_module_19_score"
+                        android:alpha="0.87"
+                        style="@style/tv_subtitle_1"
+                        android:textColor="@color/cb_on_background_black"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/pretest_results_default_score"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:layout_marginTop="24dp"
+                    android:id="@+id/lpi_pretest_results_module_20"
+                    android:max="150"
+                    android:scaleY="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_alignParentStart="true"
+                        android:alpha="0.87"
+                        style="@style/tv_subtitle_1"
+                        android:textColor="@color/cb_on_background_black"
+                        android:text="@string/pretest_results_module_20" />
+
+                    <TextView
+                        android:alpha="0.87"
+                        android:id="@+id/tv_pretest_results_module_20_score"
+                        android:layout_alignParentEnd="true"
+                        style="@style/tv_subtitle_1"
+                        android:textColor="@color/cb_on_background_black"
+                        android:textStyle="bold"
+                        android:text="@string/pretest_results_default_score" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_pretest_results_proceed"
+                    android:layout_marginTop="24dp"
+                    style="@style/btn_contained"
+                    android:backgroundTint="@color/cb_surface"
+                    android:textColor="@color/cb_on_surface_white"
+                    android:layout_height="60dp"
+                    android:text="Proceed" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/kv_pretest_results_confetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</ScrollView>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cb_background_white"
+    tools:context=".activities.Quiz">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:elevation="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/mtb_quiz_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/cb_surface"
+                    app:title="@string/quiz_toolbar_title"
+                    app:navigationIcon="@drawable/top_app_bar_back_icon" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:background="@color/cb_background_white"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/ll_quiz_loading"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:layout_gravity="center"
+                        app:indicatorColor="@color/cb_primary_purple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_quiz_question_counter"
+                        android:textColor="@color/cb_on_background_black"
+                        android:layout_marginTop="12dp"
+                        style="@style/tv_body_2" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_weight="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_quiz_question_info"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_quiz_question_title"
+                                style="@style/tv_headline_6"
+                                android:textColor="@color/cb_primary_black"
+                                android:alpha="0.87"
+                                android:textStyle="bold"
+                                android:text="@string/quiz_question_title" />
+
+                            <TextView
+                                android:id="@+id/tv_quiz_question"
+                                style="@style/tv_body_1"
+                                android:layout_marginTop="6dp"
+                                android:alpha="0.87"
+                                android:text="@string/temp_string_paragraph"
+                                android:textColor="@color/cb_primary_black" />
+
+                            <ImageView
+                                android:layout_marginTop="12dp"
+                                android:id="@+id/iv_quiz_code_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:id="@+id/ll_quiz_choices"
+                                android:layout_marginTop="12dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+
+                <androidx.core.widget.NestedScrollView
+                    android:background="@drawable/rounded_corners_border_light_gray"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_quiz_item_navigation"
+                        android:padding="12dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+                <RelativeLayout
+                    android:background="@drawable/rounded_corners_border_light_gray"
+                    android:visibility="visible"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="0"
+                    android:padding="6dp"
+                    android:id="@+id/rl_quiz_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/btn_quiz_previous_question"
+                        style="@style/btn_contained"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/button_previous"
+                        android:textColor="@color/cb_on_surface_white" />
+
+                    <Button
+                        style="@style/btn_contained"
+                        android:id="@+id/btn_quiz_next_question"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="6dp"
+                        android:text="@string/button_next"
+                        android:textColor="@color/cb_on_surface_white" />
+                </RelativeLayout>
+
+                <Button
+                    style="@style/btn_contained"
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/btn_quiz_submit_quiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/cb_primary_purple"
+                    android:text="@string/button_submit"
+                    android:textColor="@color/cb_on_surface_white"
+                    android:textAppearance="@style/tv_button" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:background="@color/cb_background_white"
+    android:id="@+id/dl_home_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Home">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@color/cb_background_black"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:elevation="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:background="@color/cb_surface"
+                        app:title="@string/home_toolbar_title"
+                        android:id="@+id/mtb_home_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize" />
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <RelativeLayout
+                    android:background="@drawable/home_header_background"
+                    android:id="@+id/rl_home_user_greetings"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/tv_home_name"
+                        style="@style/tv_headline_6"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="24dp"
+                        android:alpha="0.87"
+                        android:text="@string/temp_string_title"
+                        android:textColor="@color/cb_on_background_white" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ai_robot_zoom_in_logo" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:background="@color/cb_background_black"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/ll_home_no_internet_connection"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_marginTop="12dp"
+                            style="@style/tv_subtitle_1"
+                            android:alpha="0.87"
+                            android:text="@string/no_internet_connection_title" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="@color/cb_background_black"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/ll_home_info_loading"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:layout_gravity="center"
+                            app:indicatorColor="@color/cb_primary_purple"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminate="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_home_latest_module"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:alpha="0.87"
+                                android:id="@+id/tv_home_continue_reading_title"
+                                android:textColor="@color/cb_on_background_white"
+                                style="@style/tv_headline_6"
+                                android:text="@string/button_continue_reading" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcv_home_item_latest_module_container"
+                                android:visibility="visible"
+                                android:layout_marginTop="6dp"
+                                app:cardCornerRadius="10dp"
+                                android:elevation="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:background="@color/cb_surface"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="24dp">
+
+                                        <TextView
+                                            android:alpha="0.87"
+                                            android:id="@+id/tv_item_latest_module_title"
+                                            style="@style/tv_headline_6"
+                                            android:text="@string/temp_string_title"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:alpha="0.6"
+                                            android:id="@+id/tv_item_latest_module_description"
+                                            android:layout_marginTop="8dp"
+                                            style="@style/tv_body_2"
+                                            android:text="@string/temp_string_paragraph" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- cut here -->
+
+                    <LinearLayout
+                        android:layout_marginTop="24dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:id="@+id/ll_home_progress_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    app:cardCornerRadius="10dp"
+                                    android:id="@+id/mcv_home_item_modules_count_container"
+                                    android:visibility="visible"
+                                    android:elevation="6dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:background="@color/cb_surface"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <RelativeLayout
+                                            android:padding="12dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_centerVertical="true"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:orientation="vertical" >
+
+                                                <TextView
+                                                    android:id="@+id/tv_home_item_modules_count_title"
+                                                    style="@style/tv_subtitle_1"
+                                                    android:alpha="0.87"
+                                                    android:text="@string/home_item_modules_count_title"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:alpha="0.87"
+                                                    android:textColor="@color/cb_on_surface_purple"
+                                                    android:id="@+id/tv_home_item_modules_count"
+                                                    style="@style/tv_subtitle_2"
+                                                    android:text="@string/temp_string_title" />
+                                            </LinearLayout>
+
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_centerVertical="true"
+                                                android:alpha="0.6"
+                                                android:src="@drawable/ic_modules" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                                <com.google.android.material.card.MaterialCardView
+                                    app:cardCornerRadius="10dp"
+                                    android:visibility="visible"
+                                    android:elevation="6dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:background="@color/cb_surface"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <RelativeLayout
+                                            android:padding="12dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_centerVertical="true"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/tv_home_item_topics_count_title"
+                                                    style="@style/tv_subtitle_1"
+                                                    android:alpha="0.87"
+                                                    android:text="@string/home_item_topics_count_title"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:alpha="0.87"
+                                                    android:textColor="@color/cb_on_surface_purple"
+                                                    android:id="@+id/tv_home_item_topics_count"
+                                                    style="@style/tv_subtitle_2"
+                                                    android:text="@string/temp_string_title" />
+                                            </LinearLayout>
+
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_centerVertical="true"
+                                                android:alpha="0.6"
+                                                android:src="@drawable/ic_topics" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                                <com.google.android.material.card.MaterialCardView
+                                    app:cardCornerRadius="10dp"
+                                    android:visibility="visible"
+                                    android:elevation="6dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:background="@color/cb_surface"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <RelativeLayout
+                                            android:padding="12dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_centerVertical="true"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:orientation="vertical" >
+
+                                                <TextView
+                                                    android:id="@+id/tv_home_item_quizzes_count_title"
+                                                    style="@style/tv_subtitle_1"
+                                                    android:alpha="0.87"
+                                                    android:text="@string/home_item_quizzes_count_title"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:alpha="0.87"
+                                                    android:textColor="@color/cb_on_surface_purple"
+                                                    android:id="@+id/tv_home_item_quizzes_count"
+                                                    style="@style/tv_subtitle_2"
+                                                    android:text="@string/temp_string_title" />
+                                            </LinearLayout>
+
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_centerVertical="true"
+                                                android:alpha="0.6"
+                                                android:src="@drawable/ic_quizzes" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                                <com.google.android.material.card.MaterialCardView
+                                    app:cardCornerRadius="10dp"
+                                    android:visibility="visible"
+                                    android:elevation="6dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:background="@color/cb_surface"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <RelativeLayout
+                                            android:padding="12dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_centerVertical="true"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/tv_home_item_exercises_count_title"
+                                                    style="@style/tv_subtitle_1"
+                                                    android:alpha="0.87"
+                                                    android:text="@string/home_item_exercises_count_title"
+                                                    android:textStyle="bold" />
+
+                                                <TextView                                                    android:alpha="0.87"
+                                                    android:textColor="@color/cb_on_surface_purple"
+                                                    android:id="@+id/tv_home_item_exercises_count"
+                                                    style="@style/tv_subtitle_2"
+                                                    android:text="@string/temp_string_title" />
+                                            </LinearLayout>
+
+                                            <ImageView
+                                                android:alpha="0.6"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_centerVertical="true"
+                                                android:src="@drawable/ic_exercises" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginLeft="6dp"
+                                android:layout_gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    app:cardCornerRadius="12dp"
+                                    android:visibility="visible"
+                                    android:elevation="6dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:background="@color/cb_surface"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_gravity="center"
+                                            android:padding="12dp"
+                                            android:id="@+id/tv_home_item_module_progress_count_title"
+                                            style="@style/tv_subtitle_1"
+                                            android:alpha="0.87"
+                                            android:text="@string/home_item_module_progress_count_title"
+                                            android:textStyle="bold" />
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_gravity="center"
+                                            android:layout_marginBottom="12dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+                                            <ProgressBar
+                                                android:max="100"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                android:id="@+id/pb_home_item_module_progress"
+                                                android:layout_gravity="center"
+                                                android:layout_width="150dp"
+                                                android:layout_height="150dp"
+                                                android:indeterminateOnly="false"
+                                                android:progressDrawable="@drawable/circle_progress_bar"
+                                                tools:progress="0" />
+
+                                            <TextView
+                                                app:layout_constraintStart_toStartOf="@id/pb_home_item_module_progress"
+                                                app:layout_constraintEnd_toEndOf="@id/pb_home_item_module_progress"
+                                                app:layout_constraintTop_toTopOf="@id/pb_home_item_module_progress"
+                                                app:layout_constraintBottom_toBottomOf="@id/pb_home_item_module_progress"
+                                                android:alpha="0.87"
+                                                android:id="@+id/tv_home_item_module_progress_count_in_pb"
+                                                style="@style/tv_headline_6"
+                                                android:textColor="@color/cb_on_surface_purple"
+                                                android:text="@string/temp_string_title"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="6dp" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        app:itemIconTint="@color/cb_on_surface_gray"
+        app:itemIconSize="18dp"
+        app:itemIconPadding="24dp"
+        app:itemTextAppearance="@style/NavDrawerTextStyle"
+        android:background="@color/cb_background_black"
+        android:id="@+id/nv_home_container"
+        app:headerLayout="@layout/nd_header_home"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/menu_home_nd"
+        android:layout_gravity="start" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:textColor="@color/cb_primary_purple"
+                android:id="@+id/btn_home_nd_item_logout"
+                style="@style/btn_borderless"
+                android:layout_height="75dp"
+                android:text="@string/nd_log_out"
+                app:iconTint="@color/cb_primary_purple"
+                app:icon="@drawable/ic_logout"
+                app:iconPadding="12dp"
+                app:iconGravity="textStart"
+                app:iconSize="20dp" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

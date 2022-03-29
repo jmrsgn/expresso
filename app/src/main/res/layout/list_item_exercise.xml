@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/cb_surface"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mcv_item_exercise_container"
+    app:cardElevation="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/cb_surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_item_exercise_title"
+                style="@style/tv_headline_6"
+                android:layout_width="wrap_content"
+                android:alpha="0.87"
+                android:text="@string/temp_string_title"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_marginRight="12dp"
+                android:id="@+id/iv_item_exercise_done"
+                android:visibility="gone"
+                android:src="@drawable/ic_done"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

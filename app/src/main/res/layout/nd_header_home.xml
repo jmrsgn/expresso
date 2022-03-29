@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="24dp"
+    app:elevation="24dp"
+    android:backgroundTint="@color/cb_surface"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_nd_header_home_user_avatar"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="75dp"
+        android:contentDescription="@string/home_nd_header_user_avatar"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:alpha=".87"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/cb_primary_purple"
+        android:id="@+id/tv_nd_header_home_name"
+        style="@style/tv_headline_6"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:text="@string/temp_string_title" />
+
+    <TextView
+        android:alpha=".87"
+        android:layout_marginStart="24dp"
+        android:id="@+id/tv_nd_header_home_email"
+        style="@style/tv_subtitle_1"
+        android:text="@string/temp_string_title" />
+
+    <TextView
+        android:alpha="0.6"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="24dp"
+        android:id="@+id/tv_nd_header_home_joined_date"
+        style="@style/tv_body_2"
+        android:text="@string/temp_string_title" />
+</LinearLayout>

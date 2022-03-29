@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        app:fontStyle="normal"
+        app:font="@font/open_sans_regular"
+        app:fontWeight="400"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/open_sans_regular" />
+
+    <font
+        app:fontStyle="italic"
+        app:font="@font/open_sans_italic"
+        app:fontWeight="400"
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/open_sans_italic" />
+</font-family>

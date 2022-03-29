@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_ab_email_declined_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/cb_background_black"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_error" />
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/tv_ab_email_declined_title"
+                    android:layout_gravity="center"
+                    style="@style/tv_headline_6"
+                    android:alpha="0.87"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:text="@string/email_declined_dialog_title" />
+
+                <TextView
+                    android:layout_marginBottom="12dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_ab_email_declined_message"
+                    style="@style/tv_body_1"
+                    android:textAlignment="center"
+                    android:layout_marginTop="12dp"
+                    android:alpha="0.6"
+                    android:text="@string/email_declined_dialog_message" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

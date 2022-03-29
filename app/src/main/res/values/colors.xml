@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="cb_primary_black">#000000</color>
+    <color name="cb_primary_purple">#BB86FC</color>
+    <color name="cb_secondary_light_gray">#EFEFEF</color>
+    <color name="cb_background_black">#000000</color>
+    <color name="cb_background_white">#FFFFFF</color>
+    <color name="cb_surface">#191919</color>
+    <color name="cb_error">#CF6679</color>
+    <color name="cb_on_background_black">#000000</color>
+    <color name="cb_on_background_white">#FFFFFF</color>
+    <color name="cb_on_background_purple">#BB86FC</color>
+    <color name="cb_on_surface_white">#FFFFFF</color>
+    <color name="cb_on_surface_purple">#BB86FC</color>
+    <color name="cb_on_surface_gray">#A6A7A9</color>
+    <color name="cb_on_error">#191C24</color>
+    <color name="cb_green">#4CAF50</color>
+    <color name="cb_red">#D0454C</color>
+    <color name="cb_yellow">#E8EC0C</color>
+    <color name="cb_light_gray">#D8D8D8</color>
+
+    <!-- code editor -->
+    <color name="cb_gray_200">#787A73</color>
+    <color name="cb_gray_400">#6B6856</color>
+    <color name="cb_gray_600">#2F3129</color>
+    <color name="cb_pink">#DA273E</color>
+    <color name="cb_purple">#9A73E6</color>
+    <color name="cb_light_blue">#5BC6E3</color>
+    <color name="cb_yellow_green">#8CBD28</color>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:layout_marginBottom="6dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:backgroundTint="@color/cb_surface"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/cv_item_exercise_attempt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:backgroundTint="@color/cb_surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_item_exercise_attempt_date"
+                style="@style/tv_headline_6"
+                android:layout_alignParentStart="true"
+                android:alpha="0.87"
+                android:text="@string/temp_string_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_item_exercise_attempt_remarks"
+                style="@style/tv_subtitle_2"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="42dp"
+                android:text="@string/temp_string_title" />
+
+            <ImageView
+                android:id="@+id/iv_item_exercise_attempt_show_code"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_down" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:id="@+id/iv_item_exercise_attempt_hide_code"
+                android:src="@drawable/arrow_up"
+                android:layout_alignParentEnd="true"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:visibility="gone"
+            app:cardElevation="2dp"
+            android:id="@+id/mcv_item_exercise_attempt_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="24dp"
+                android:background="@color/cb_background_black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:alpha="0.6"
+                    android:id="@+id/tv_item_exercise_attempt_code"
+                    style="@style/tv_body_1"
+                    android:text="@string/temp_string_paragraph" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

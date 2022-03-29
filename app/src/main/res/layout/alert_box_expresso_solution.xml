@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_ab_pretest_popup_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="@color/cb_background_black"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ai_robot_zoom_in_logo" />
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                style="@style/tv_body_1"
+                android:textAlignment="center"
+                android:alpha="0.6"
+                android:text="@string/exercises_solution_message" />
+
+            <ScrollView
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="325dp">
+
+                <io.github.rosemoe.editor.widget.CodeEditor
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/ce_ab_expresso_solution_editor"/>
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:alpha="0.87"
+                    android:textColor="@color/cb_on_surface_white"
+                    android:id="@+id/btn_ab_expresso_solution_your_solution"
+                    style="@style/btn_borderless"
+                    android:layout_width="wrap_content"
+                    android:text="@string/button_your_solution" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:alpha="0.87"
+                    android:textColor="@color/cb_on_surface_white"
+                    android:id="@+id/btn_ab_expresso_solution_my_solution"
+                    style="@style/btn_borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@id/btn_ab_expresso_solution_your_solution"
+                    android:text="@string/button_my_solution" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</ScrollView>

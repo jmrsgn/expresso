@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/home_nd_group_me"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home_nd_item_home"
+            android:title="@string/nd_home"
+            android:icon="@drawable/ic_home" />
+        <item
+            android:id="@+id/home_nd_item_modules"
+            android:title="@string/nd_modules"
+            android:icon="@drawable/ic_modules" />
+        <item
+            android:id="@+id/home_nd_item_certifications"
+            android:title="@string/nd_certificate"
+            android:icon="@drawable/ic_certificate" />
+    </group>
+
+    <group
+        android:id="@+id/home_nd_group_app"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home_nd_item_about_us"
+            android:title="@string/nd_about_us"
+            android:icon="@drawable/ic_about_us" />
+    </group>
+</menu>

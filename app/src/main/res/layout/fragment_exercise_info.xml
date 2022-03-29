@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ExerciseInfoFragment">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:elevation="24dp"
+            android:background="@color/cb_background_black"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_exercise_info_fragment_title"
+                style="@style/tv_headline_6"
+                android:textStyle="bold"
+                android:alpha="0.87"
+                android:text="@string/temp_string_title" />
+
+            <TextView
+                android:id="@+id/tv_exercise_info_fragment_difficulty"
+                style="@style/tv_subtitle_2"
+                android:text="@string/temp_string_title" />
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="@color/cb_on_surface_white" />
+
+            <TextView
+                android:layout_marginTop="12dp"
+                style="@style/tv_headline_6"
+                android:alpha="0.87"
+                android:text="Description"
+                />
+
+            <TextView
+                android:alpha="0.6"
+                android:id="@+id/tv_exercise_info_fragment_description"
+                style="@style/tv_body_2"
+                android:text="@string/temp_string_paragraph"
+                />
+
+            <TextView
+                android:alpha="0.87"
+                android:layout_marginTop="24dp"
+                style="@style/tv_headline_6"
+                android:textStyle="bold"
+                android:text="Examples:" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_exercise_info_fragment_examples"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_exercise_info_fragment_robot_help_message"
+                    style="@style/tv_body_1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="80dp"
+                    android:alpha="0.87"
+                    android:background="@drawable/outgoing_speech_bubble_light_gray"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/exercise_info_fragment_robot_hint_message"
+                    android:textColor="@color/cb_primary_black" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="end"
+                    android:id="@+id/iv_exercise_info_fragment_robot_hint"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ai_robot_zoom_in_logo" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

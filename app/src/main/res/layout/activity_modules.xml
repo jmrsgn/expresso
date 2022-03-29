@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/cl_modules"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/cb_background_black"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:elevation="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:background="@color/cb_surface"
+                android:id="@+id/mtb_modules_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/top_app_bar_back_icon"
+                app:title="@string/modules_toolbar_title" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:background="@color/cb_background_white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/ll_modules_no_results_found"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/no_data_logo" />
+
+            <TextView
+                android:layout_marginTop="12dp"
+                style="@style/tv_subtitle_1"
+                android:alpha="0.87"
+                android:text="@string/no_results_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/cb_background_black"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/ll_modules_loading"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_gravity="center"
+                app:indicatorColor="@color/cb_primary_purple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:visibility="gone"
+                android:layout_height="60dp"
+                android:textColor="@color/cb_on_surface_white"
+                style="@style/btn_contained"
+                android:id="@+id/btn_modules_unlock_next_module"
+                android:text="@string/button_unlock_next_module" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding = "false"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_modules_modules"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

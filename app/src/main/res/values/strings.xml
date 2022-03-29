@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">Expresso</string>
+
+    <!-- custom -->
+    <!-- screens -->
+    <!-- main | screen -->
+    <string name="home_app_name">Expresso</string>
+    <string name="home_app_title">Your guide in learning Object Oriented Programming</string>
+    <string name="home_app_description">Providing students with the best set of modules in learning Object Oriented Programming using JAVA language.</string>
+
+    <!-- about us | screen -->
+    <string name="about_us_toolbar_title">About Us</string>
+    <string name="about_us_what_is_expresso_title">What is Expresso?</string>
+    <string name="about_us_what_is_expresso">Expresso is an Intelligent Tutoring System that aims to aid the students in learning Object-Oriented Programming concepts using Java.</string>
+    <string name="about_us_the_objectives_of_the_developers_title">The Objectives of the Developers</string>
+    <string name="about_us_the_objectives_of_the_developers_1">Develop an Intelligent Tutoring System that will be a learning aid for the students to strengthen their knowledge and reduce their difficulties in learning object-oriented courses. </string>
+    <string name="about_us_the_objectives_of_the_developers_2">Create a learning environment that will increase the learning experience and interest of the Information Technology students.</string>
+    <string name="about_us_the_development_team_title">The Development Team</string>
+    <string name="about_us_developer_marasigan">John Martin I. Marasigan</string>
+    <string name="about_us_developer_pasamanero">Kaire Edzel Z. Pasamanero</string>
+    <string name="about_us_developer_punzalan">Miles Chrisvian B. Punzalan</string>
+    <string name="about_us_developer_zaulda">Maive T. Zaulda</string>
+    <string name="about_us_developer_marasigan_email">marasiganjohnmartin@gmail.com</string>
+    <string name="about_us_developer_pasamanero_email">edzelpasamanero@gmail.com</string>
+    <string name="about_us_developer_punzalan_email">mls.crsvn15@gmail.com</string>
+    <string name="about_us_developer_zaulda_email">maive.zaulda@gmail.com</string>
+    <string name="about_us_role_mobile_developer">Mobile Developer</string>
+    <string name="about_us_role_web_developer">Web Developer</string>
+    <string name="about_us_role_project_manager_and_database_administrator">Project Manager / Database Administrator</string>
+
+    <!-- home | screen -->
+    <string name="home_toolbar_title">Home</string>
+    <string name="home_welcome_title">Welcome</string>
+    <string name="home_all_topics_are_completed">All topics are completed so far</string>
+    <string name="home_item_modules_count_title">Modules</string>
+    <string name="home_item_topics_count_title">Topics</string>
+    <string name="home_item_exercises_count_title">Exercises</string>
+    <string name="home_item_quizzes_count_title">Quizzes</string>
+    <string name="home_item_module_progress_count_title">Module Progress</string>
+
+    <!-- home | nd | component -->
+    <string name="nd_open">Open navigation drawer</string>
+    <string name="nd_close">Close navigation drawer</string>
+    <string name="nd_home">Home</string>
+    <string name="nd_modules">Modules</string>
+    <string name="nd_certificate">Certificate</string>
+    <string name="nd_about_us">About Us</string>
+    <string name="nd_log_out">Log out</string>
+
+    <!-- modules | screen -->
+    <string name="modules_toolbar_title">Modules</string>
+
+    <!-- certificates | screen -->
+    <string name="certificates_toolbar_title">Certificates</string>
+
+    <!-- topics | screen -->
+    <string name="topics_toolbar_title">Topics</string>
+
+    <!-- topic video | screen -->
+    <string name="topic_video_toolbar_title">Topic Video</string>
+
+    <!-- exercises | screen -->
+    <string name="exercise_toolbar_title">Exercise</string>
+    <string name="exercises_solution_message">Since you\'ve passed this exercise already, I provided my own solution for this exercise so you can differentiate your solution from mine. Our solutions are shown below.</string>
+
+    <!-- quiz | screen -->
+    <string name="quiz_toolbar_title">Quiz</string>
+    <string name="quiz_question_title">Question</string>
+
+    <!-- quiz results | screen -->
+    <string name="quiz_results_toolbar_title">Quiz Results</string>
+
+    <!-- pretest results | screen -->
+    <string name="pretest_results_toolbar_title">Pretest Results</string>
+    <string name="pretest_results_module_10">Java Fundamentals</string>
+    <string name="pretest_results_module_19">OOP Methods</string>
+    <string name="pretest_results_module_20">Creating Own Class</string>
+    <string name="pretest_results_default_score">0/10</string>
+
+
+    <!-- items -->
+    <!-- module item | component -->
+    <string name="module_available_offline_text">Available offline</string>
+
+    <!-- home - nd_header | component -->
+    <string name="home_nd_header_user_avatar">User avatar</string>
+
+
+    <!-- others -->
+
+    <!-- email declined dialog -->
+    <string name="email_declined_dialog_title">Email declined</string>
+    <string name="email_declined_dialog_message">Please use your JRU email.</string>
+
+    <!-- pretest dialog -->
+    <string name="pretest_dialog_title">Pre-test</string>
+    <string name="pretest_dialog_go_to_quiz">Go to quiz</string>
+
+    <!-- button strings -->
+    <string name="button_continue">Continue</string>
+    <string name="button_close">Close</string>
+    <string name="button_previous">Previous</string>
+    <string name="button_next">Next</string>
+    <string name="button_submit">Submit</string>
+    <string name="button_solution">Solution</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="button_proceed">Proceed</string>
+    <string name="button_run">Run</string>
+    <string name="button_clear">Clear</string>
+    <string name="button_input">Input</string>
+    <string name="button_logout">Logout</string>
+    <string name="button_visualize">Visualize</string>
+    <string name="button_continue_with_google">Continue with google</string>
+    <string name="button_unlock_next_module">Unlock next module</string>
+    <string name="button_continue_reading">Continue reading</string>
+    <string name="button_your_solution">Your solution</string>
+    <string name="button_my_solution">My solution</string>
+
+    <!-- no results -->
+    <string name="no_results_title">No results found.</string>
+
+    <!-- no internet -->
+    <string name="no_internet_connection_title">No internet connection.</string>
+
+    <!-- robot -->
+    <string name="exercise_info_fragment_robot_hint_message">Need help? Click me for a hint.</string>
+
+    <!-- copyright -->
+    <string name="expresso_copyright">The Expresso Development Team, Code Brewers © 2021. All rights reserved.</string>
+
+    <!-- temporary strings -->
+    <string name="temp_string_title">Temp</string>
+    <string name="temp_string_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in pretium tellus. Fusce mattis, nunc in rhoncus placerat, lacus nisi.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

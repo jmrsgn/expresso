@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cb_background_white"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragments.TopicContentFragment">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false">
+
+            <TextView
+                android:layout_marginBottom="42dp"
+                android:id="@+id/tv_topic_content_fragment_content"
+                android:alpha="0.87"
+                android:textColor="@color/cb_on_background_black"
+                style="@style/tv_body_2" />
+
+            <!-- images -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_topic_content_fragment_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="42dp"
+                android:id="@+id/ll_topic_content_fragment_other_materials"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corners_border_light_gray"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/tv_headline_6"
+                    android:text="Extra material"
+                    android:alpha="0.87"
+                    android:textColor="@color/cb_on_background_black" />
+
+                <FrameLayout
+                    android:id="@+id/fl_topic_content_fragment_youtube_player"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/frame_fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                    </FrameLayout>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:textStyle="italic"
+                    android:alpha="0.87"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cb_on_background_black"
+                    style="@style/tv_overline"
+                    android:id="@+id/tv_topic_content_fragment_youtube_link" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="42dp"
+                android:id="@+id/tv_topic_content_fragment_topic_quiz_note"
+                android:textStyle="italic|bold"
+                android:alpha="0.6"
+                style="@style/tv_caption"
+                android:textColor="@color/cb_on_background_black"
+                android:text="Answer the questions first to move on the next topic."/>
+
+            <LinearLayout
+                android:id="@+id/ll_topic_content_fragment_topic_quiz_attempt"
+                android:layout_marginBottom="42dp"
+                android:layout_marginTop="4dp"
+                android:padding="24dp"
+                android:background="@drawable/rounded_corners_border_light_gray"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv_topic_content_fragment_topic_quiz_title"
+                        android:alpha="0.87"
+                        android:textColor="@color/cb_on_background_black"
+                        style="@style/tv_headline_6"
+                        android:text="Test your knowledge" />
+
+                    <ImageView
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toRightOf="@id/tv_topic_content_fragment_topic_quiz_title"
+                        android:src="@drawable/ic_notebook" />
+                </RelativeLayout>
+
+                <Button
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_topic_content_fragment_start_topic_quiz"
+                    style="@style/btn_contained"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/cb_surface"
+                    android:text="Start"
+                    android:textColor="@color/cb_on_surface_white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/cb_background_white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/ll_topic_content_fragment_loading"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_gravity="center"
+                app:indicatorColor="@color/cb_primary_purple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+        </LinearLayout>
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/kv_confetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

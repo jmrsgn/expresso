@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cb_background_white"
+    tools:context=".activities.TopicQuiz">
+
+    <LinearLayout
+        android:id="@+id/ll_topic_quiz"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:elevation="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/mtb_topic_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/cb_surface"
+                app:navigationIcon="@drawable/top_app_bar_back_icon"
+                app:title="@string/temp_string_title" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/ll_topic_quiz_loading"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_gravity="center"
+                    app:indicatorColor="@color/cb_primary_purple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_weight="4"
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="24dp"
+                        style="@style/tv_headline_6"
+                        android:alpha="0.87"
+                        android:fontFamily="@font/open_sans_semibold_italic"
+                        android:text="Questions:"
+                        android:textColor="@color/cb_primary_black" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_topic_quiz_quiz"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"  />
+
+                    <RelativeLayout
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btn_topic_quiz_previous_module"
+                            style="@style/btn_borderless"
+                            android:layout_width="150dp"
+                            android:layout_alignParentStart="true"
+                            android:text="@string/temp_string_title"
+                            android:textColor="@color/cb_on_background_black"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_topic_quiz_next_module"
+                            style="@style/btn_contained"
+                            android:layout_width="150dp"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/temp_string_title"
+                            android:textColor="@color/cb_on_surface_white" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
